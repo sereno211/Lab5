@@ -26,6 +26,15 @@ namespace SimpleCalculator.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Divide", ReplyAction="*")]
         double Divide(double f1, double f2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SquareRoot", ReplyAction="*")]
+        double SquareRoot(double f1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Halve", ReplyAction="*")]
+        double Halve(double f1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Quater", ReplyAction="*")]
+        double Quater(double f1);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +78,18 @@ namespace SimpleCalculator.ServiceReference1 {
         
         public double Divide(double f1, double f2) {
             return base.Channel.Divide(f1, f2);
+        }
+        
+        public double SquareRoot(double f1) {
+            return base.Channel.SquareRoot(f1);
+        }
+        
+        public double Halve(double f1) {
+            return base.Channel.Halve(f1);
+        }
+        
+        public double Quater(double f1) {
+            return base.Channel.Quater(f1);
         }
     }
 }
